@@ -1,0 +1,28 @@
+.owner-row {
+  display: flex;
+  white-space: nowrap;
+  margin: 7px 0;
+}
+
+.ownerAddress {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.ownerText {
+  margin-right: 10px;
+}
+
+.owner {
+  color: lime;
+  font-weight: bold;
+}
+
+.transfer-row {
+  display: flex;
+}
+
+.vishidden {
+  visibility: hidden;
+}

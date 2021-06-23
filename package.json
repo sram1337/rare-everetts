@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.1.0",
+    "es6-promise": "^4.2.8",
+    "promise-polyfill": "8.2.0"
+  },
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  },
+  "name": "rare-everetts",
+  "version": "1.0.0",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
