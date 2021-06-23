@@ -6,6 +6,7 @@
   },
   "scripts": {
     "dev": "lite-server"
+    "server": "lite-server"
   },
   "devDependencies": {
     "lite-server": "^2.3.0"
