@@ -2,11 +2,12 @@
   "dependencies": {
     "@openzeppelin/contracts": "^4.1.0",
     "es6-promise": "^4.2.8",
+    "express": "^4.17.1",
     "promise-polyfill": "8.2.0"
   },
   "scripts": {
-    "dev": "lite-server"
-    "server": "lite-server"
+    "dev": "lite-server -c ./bs-config.json",
+    "server": "lite-server -c ./bs-config.json"
   },
   "devDependencies": {
     "lite-server": "^2.3.0"
