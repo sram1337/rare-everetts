@@ -1,3 +1,4 @@
-.secret
+*secret*
 *~
 node_modules
+*.swp
