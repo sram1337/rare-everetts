@@ -98,14 +98,22 @@ App = {
         var currId = i / 2;
         console.log(currId+" owned by "+data[i]);
         var currPanel = App.getPanel(currId);
-        var ownerAddress =  currPanel.find('.ownerAddress');
-        var isCurrentAccount = data[i] === web3.eth.accounts[0]
+        var ownerAddressLabel =  currPanel.find('.ownerAddress');
+        var ownerAddress = data[i];
+        var currentAccount = web3.eth.accounts[0]
+        var isCurrentAccount = ownerAddress === currentAccount;
+        var knownOwner;
+        console.log("Owner info for Ev #"+currId);
+        console.log(App.addressToKnownOwner);
+        console.log(ownerAddress);
         if(isCurrentAccount) {
-          ownerAddress.text("You!");
+          ownerAddressLabel.text("You!");
+        } else if((knownOwner = App.addressToKnownOwner[ownerAddress]) !== undefined) {
+            ownerAddressLabel.html("<a href='https://discord.gg/YjqRxGwDV9'>"+knownOwner+"</a> "+ownerAddress);
         } else {
-          ownerAddress.text(data[i]);
+          ownerAddressLabel.text(data[i]);
         }
-        ownerAddress.toggleClass("owner", isCurrentAccount); 
+        ownerAddressLabel.toggleClass("owner", isCurrentAccount); 
         currPanel.find(".transfer-row").toggleClass("vishidden", !isCurrentAccount);
         currPanel.find("img").attr('src', data[i+1].image);
         currPanel.find(".panel-title").attr('src', data[i+1].name);
@@ -114,7 +122,11 @@ App = {
       console.log('Error: ' + err.message);
     });
   },
+  addressToKnownOwner: {
 
+      "0x6106bb608593b8214adbcc9c60c5b61ff066f19c": "Ryhan",
+      "0x4cf457e6226d7add647915935047eb982465bcda": "sram1337",
+  },
   handleAdopt: function(event) {
     event.preventDefault();
 
