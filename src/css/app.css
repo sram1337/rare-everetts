@@ -1,7 +1,6 @@
 .owner-row {
   display: flex;
   white-space: nowrap;
-  margin: 7px 0;
 }
 
 .ownerAddress {
@@ -21,8 +20,13 @@
 
 .transfer-row {
   display: flex;
+  margin-top: 7px;
 }
 
 .vishidden {
   visibility: hidden;
+}
+
+.panel-footer {
+  padding: 7px;
 }
