@@ -38,7 +38,9 @@ App = {
     }
     // If no injected web3 instance is detected, fall back to Ganache
     else {
-      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
+      // App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
+      console.log("No web3 provider found - falling back to infura");
+      App.web3Provider = new Web3.providers.HttpProvider('https://rinkeby.infura.io/v3/0997ffefa60b424dbca9b5efd061e76c');
     }
     web3 = new Web3(App.web3Provider);
 
