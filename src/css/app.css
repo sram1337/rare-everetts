@@ -1,16 +1,33 @@
+body {
+    background-color: black;
+}
+
+h1, h3, body {
+    color: white
+}
+
+h1 {
+    font-size: 48px;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
 .owner-row {
   display: flex;
   white-space: nowrap;
 }
 
-.ownerAddress {
+.owner-address {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  color: yellow;
 }
 
-.ownerText {
-  margin-right: 5px;
+.owner-text {
+  margin-right: 4px;
 }
 
 .owner {
@@ -20,7 +37,24 @@
 
 .transfer-row {
   display: flex;
+  width: 100%;
   margin-top: 7px;
+}
+
+.transfer-row input {
+    width: 100%;
+    border: none;
+    border-right: 1px solid black;
+    color: black;
+    padding-left: 8px;
+}
+
+.transfer-row button {
+    border: none;
+    border-left: 1px lightGrey;
+    border-radius: 0;
+    background-color: blue;
+    color: white;
 }
 
 .vishidden {
@@ -28,5 +62,29 @@
 }
 
 .panel-footer {
+  padding: 5px;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+}
+
+.panel-name {
   padding: 7px;
+  background-color: black;
+}
+
+.panel-title {
+}
+
+.panel {
+    border: none;
+}
+
+.everett-id-row {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    color: cyan;
 }

@@ -96,24 +96,22 @@ App = {
     }).then(function(data) {
       for(i=0;i<data.length;i=i+2){
         var currId = i / 2;
-        console.log(currId+" owned by "+data[i]);
         var currPanel = App.getPanel(currId);
-        var ownerAddressLabel =  currPanel.find('.ownerAddress');
+        var ownerNameLabel =  currPanel.find('.owner-name');
+        var ownerAddressLabel =  currPanel.find('.owner-address');
         var ownerAddress = data[i];
         var currentAccount = web3.eth.accounts[0]
         var isCurrentAccount = ownerAddress === currentAccount;
         var knownOwner;
-        console.log("Owner info for Ev #"+currId);
-        console.log(App.addressToKnownOwner);
-        console.log(ownerAddress);
         if(isCurrentAccount) {
-          ownerAddressLabel.text("You!");
+          ownerNameLabel.text("You!");
         } else if((knownOwner = App.addressToKnownOwner[ownerAddress]) !== undefined) {
-            ownerAddressLabel.html("<a href='https://discord.gg/YjqRxGwDV9'>"+knownOwner+"</a> "+ownerAddress);
+            ownerNameLabel.html("<a href='https://discord.gg/YjqRxGwDV9'>"+knownOwner+"</a> ");
         } else {
-          ownerAddressLabel.text(data[i]);
+          ownerNameLabel.text("Unknown");
         }
-        ownerAddressLabel.toggleClass("owner", isCurrentAccount); 
+        ownerAddressLabel.text(ownerAddress);
+        ownerNameLabel.toggleClass("owner", isCurrentAccount);
         currPanel.find(".transfer-row").toggleClass("vishidden", !isCurrentAccount);
         currPanel.find("img").attr('src', data[i+1].image);
         currPanel.find(".panel-title").attr('src', data[i+1].name);
@@ -126,6 +124,7 @@ App = {
 
       "0x6106bb608593b8214adbcc9c60c5b61ff066f19c": "Ryhan",
       "0x4cf457e6226d7add647915935047eb982465bcda": "sram1337",
+      "0xdfee3331dc196bcdb31ce156688788d918ab7ff6": "LukasPalukas",
   },
   handleAdopt: function(event) {
     event.preventDefault();
@@ -147,7 +146,6 @@ App = {
         rareEvsInstance = instance;
 
         // Execute adopt as a transaction by sending account
-        console.log("attempting to send RareEverett #"+everettId+" from "+account+" to "+toAddress);
         return rareEvsInstance.safeTransferFrom(account, toAddress, everettId);
       }).then(function(result) {
         return App.markAdopted();
