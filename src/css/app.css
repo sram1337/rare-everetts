@@ -78,6 +78,7 @@ h1 {
 
 .panel {
     border: none;
+    background-color: transparent;
 }
 
 .everett-id-row {
