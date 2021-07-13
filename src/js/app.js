@@ -127,8 +127,8 @@ App = {
       "0x6106bb608593b8214adbcc9c60c5b61ff066f19c": "Ryhan",
       "0x4cf457e6226d7add647915935047eb982465bcda": "sram1337",
       "0xdfee3331dc196bcdb31ce156688788d918ab7ff6": "LukasPalukas",
-      "0xa8C0F3e7C04B36EecB1E2c176f2Adf49632500DE": "WillJoslin",
-      "0x331ab9008ECEdAd6FaB4BF6d1Ae1200EF8986a87": "CaptainInsano",
+      "0xa8c0f3e7c04b36eecb1e2c176f2adf49632500de": "WillJoslin",
+      "0x331ab9008ecedad6fab4bf6d1ae1200ef8986a87": "CaptainInsano",
   },
   handleAdopt: function(event) {
     event.preventDefault();
