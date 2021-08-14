@@ -129,6 +129,7 @@ App = {
       "0xdfee3331dc196bcdb31ce156688788d918ab7ff6": "LukasPalukas",
       "0xa8c0f3e7c04b36eecb1e2c176f2adf49632500de": "WillJoslin",
       "0x331ab9008ecedad6fab4bf6d1ae1200ef8986a87": "CaptainInsano",
+      "0xcff44ada03447d242b2b552a1c02aa5b80a8d8ed": "Bhavin",
   },
   handleAdopt: function(event) {
     event.preventDefault();
