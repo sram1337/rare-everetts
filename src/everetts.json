@@ -78,6 +78,31 @@
         "id": 15,
         "name": "RareEverett #15",
         "image": "http://samramirez.io/RareEveretts/15.jpg"
+    },
+    {
+        "id": 16,
+        "name": "RareEverett #16",
+        "image": "http://samramirez.io/RareEveretts/16.jpg"
+    },
+    {
+        "id": 17,
+        "name": "RareEverett #17",
+        "image": "http://samramirez.io/RareEveretts/17.jpg"
+    },
+    {
+        "id": 18,
+        "name": "RareEverett #18",
+        "image": "http://samramirez.io/RareEveretts/18.jpg"
+    },
+    {
+        "id": 19,
+        "name": "RareEverett #19",
+        "image": "http://samramirez.io/RareEveretts/19.jpg"
+    },
+    {
+        "id": 20,
+        "name": "RareEverett #20",
+        "image": "http://samramirez.io/RareEveretts/20.jpg"
     }
 
 ]
