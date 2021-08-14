@@ -103,6 +103,16 @@
         "id": 20,
         "name": "RareEverett #20",
         "image": "http://samramirez.io/RareEveretts/20.jpg"
+    },
+    {
+        "id": 21,
+        "name": "RareEverett #21",
+        "image": "http://samramirez.io/RareEveretts/21.jpg"
+    },
+    {
+        "id": 22,
+        "name": "RareEverett #22",
+        "image": "http://samramirez.io/RareEveretts/22.jpg"
     }
 
 ]
